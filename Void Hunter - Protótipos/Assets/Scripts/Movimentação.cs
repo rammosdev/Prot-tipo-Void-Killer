@@ -37,23 +37,14 @@ public class Movimentação : MonoBehaviour
 
     public void Move()
     {
-        //Movimentação
-        rig.velocity.Normalize();
-        movimento.x = Input.GetAxis("Horizontal");
-        movimento.y = Input.GetAxis("Vertical");
-        rig.velocity = new Vector2(movimento.x * speed, movimento.y * speed);
+        movimento = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        //Animação
-        if (movimento.x != 0)
-        {
-            anima.SetFloat("Speed", Mathf.Abs(movimento.x));
-            //O sprite olha pro lado que o jogador se mover
-            transform.localScale = new Vector3(Mathf.Sign(movimento.x), 1f, 1f);
-        }
-        else if(movimento.y != 0)
-        {
-            anima.SetFloat("Speed", Mathf.Abs(movimento.y));
-        }
+        if (movimento.magnitude >= 1) movimento.Normalize();
+        rig.velocity = movimento * speed;
+
+        anima.SetFloat("Speed", movimento.magnitude);
+
+        if (movimento.x != 0) transform.localScale = new Vector3(Mathf.Sign(movimento.x), 1f, 1f);
     }
 
     public void Atirando()
