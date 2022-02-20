@@ -12,7 +12,6 @@ public class Movimentação : MonoBehaviour
 
     Vector2 movimento;
 
-    public Transform firePoint;
     public GameObject bulletPrefab;
 
 
@@ -32,7 +31,6 @@ public class Movimentação : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        Atirando();
     }
 
     public void Move()
@@ -45,14 +43,5 @@ public class Movimentação : MonoBehaviour
         anima.SetFloat("Speed", movimento.magnitude);
 
         if (movimento.x != 0) transform.localScale = new Vector3(Mathf.Sign(movimento.x), 1f, 1f);
-    }
-
-    public void Atirando()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Debug.Log("oi");
-        }
     }
 }
