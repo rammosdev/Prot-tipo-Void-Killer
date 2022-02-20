@@ -8,8 +8,6 @@ public class Shooting : MonoBehaviour
 
     public Transform firePoint;
 
-    public float range;
-
     public Transform enemy;
 
     float timeBetween;
@@ -26,9 +24,8 @@ public class Shooting : MonoBehaviour
 
         if (timeBetween <= 0)
         {
-            Vector3 Direction = firePoint.position - enemy.position;
-            firePoint.transform.localRotation = Quaternion.LookRotation(Direction);
-            Instantiate(bullet, firePoint.position, firePoint.rotation);
+            Vector3 targetDirection = transform.position - enemy.position;
+            Instantiate(bullet, firePoint.position, Quaternion.LookRotation(new Vector3(0, 0, 1), -targetDirection));
             timeBetween = startTimeBetween;
         }
         else

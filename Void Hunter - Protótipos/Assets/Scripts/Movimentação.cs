@@ -12,8 +12,6 @@ public class Movimentação : MonoBehaviour
 
     Vector2 movimento;
 
-    public GameObject bulletPrefab;
-
 
 
     void Start()

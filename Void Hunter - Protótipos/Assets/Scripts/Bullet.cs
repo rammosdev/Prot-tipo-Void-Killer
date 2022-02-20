@@ -5,7 +5,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 5;
-    public Transform enemy;
     public Rigidbody2D rig;
 
 
@@ -19,7 +18,7 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rig.velocity = transform.up * speed * Time.deltaTime;
+        rig.velocity = transform.up * speed;
     }
 
     private void OnBecameInvisible()
