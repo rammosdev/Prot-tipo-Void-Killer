@@ -18,10 +18,9 @@ public class SRC_Spawn_Wave : MonoBehaviour
     }
     IEnumerator SpawnEnemy()
     {
-        Vector2 spawnPos = GameObject.Find("Char").transform.position;
-        spawnPos += Random.insideUnitCircle.normalized * RadiusSpawn;
-
-        if(GameObject.FindGameObjectsWithTag("Enemy").Length < Max_Enemy_Wave){
+        while(GameObject.FindGameObjectsWithTag("Enemy").Length < Max_Enemy_Wave){
+            Vector2 spawnPos = GameObject.Find("Char").transform.position;
+            spawnPos += Random.insideUnitCircle.normalized * RadiusSpawn;
             Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPos, Quaternion.identity);
         }
         yield return new WaitForSeconds(time);
