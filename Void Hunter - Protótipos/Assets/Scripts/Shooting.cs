@@ -5,12 +5,10 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     public GameObject bullet;
-
-    public Transform firePoint;
-
-    public Transform enemy;
     public GameObject[] Enemies;
 
+    public Transform firePoint;
+    public Transform Player;
     float timeBetween;
     public float startTimeBetween;
     // Start is called before the first frame update
@@ -27,7 +25,7 @@ public class Shooting : MonoBehaviour
         if (timeBetween <= 0)
         {
             Vector3 targetDirection = transform.position - EnemyNearDistance.transform.position ;
-            Instantiate(bullet, firePoint.position, Quaternion.LookRotation(new Vector3(0, 0, 1), -targetDirection));
+            Instantiate(bullet, firePoint.position, Quaternion.LookRotation(new Vector3(0, 0, 1), -targetDirection), Player);
             timeBetween = startTimeBetween;
         }
         else
