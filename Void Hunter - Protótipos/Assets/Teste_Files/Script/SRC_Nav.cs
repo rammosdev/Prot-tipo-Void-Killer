@@ -22,13 +22,4 @@ public class SRC_Nav : MonoBehaviour
     {
         agent.SetDestination(Point.transform.position);
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Bullet")
-        {
-            Debug.Log("aAa");
-            Destroy(gameObject);
-        }
-    }
 }

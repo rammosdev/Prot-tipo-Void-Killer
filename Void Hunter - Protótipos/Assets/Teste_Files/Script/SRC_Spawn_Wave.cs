@@ -9,6 +9,7 @@ public class SRC_Spawn_Wave : MonoBehaviour
 
     [SerializeField]
     private float RadiusSpawn = 10, time = 1.5f;
+    public Transform ParentEnemy;
     public GameObject[] enemies;
 
     private int Max_Enemy_Wave = 10;
@@ -21,7 +22,7 @@ public class SRC_Spawn_Wave : MonoBehaviour
         while(GameObject.FindGameObjectsWithTag("Enemy").Length < Max_Enemy_Wave){
             Vector2 spawnPos = GameObject.Find("Char").transform.position;
             spawnPos += Random.insideUnitCircle.normalized * RadiusSpawn;
-            Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPos, Quaternion.identity);
+            Instantiate(enemies[Random.Range(0, enemies.Length)], spawnPos, Quaternion.identity, ParentEnemy);
         }
         yield return new WaitForSeconds(time);
         StartCoroutine(SpawnEnemy());
