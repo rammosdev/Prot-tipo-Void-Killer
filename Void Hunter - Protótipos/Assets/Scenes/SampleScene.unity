@@ -501,6 +501,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af1f220fa96c27143a6649cf26755780, type: 3}
+--- !u!1 &4252470569889291640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7324982963736547332, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+  m_PrefabInstance: {fileID: 6819679372690312572}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4734764101064049315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252470569889291640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff
 --- !u!1001 &6819679372690312572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -559,7 +580,7 @@ PrefabInstance:
     - target: {fileID: 6819679372632940318, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 23800000, guid: 911d0bafe7805474ebdaf95cea539d88, type: 2}
     - target: {fileID: 6819679372632940319, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1904,6 +1925,13 @@ PrefabInstance:
     - {fileID: 6819679371878192182, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
     - {fileID: 6819679372193133520, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
     - {fileID: 6819679372458792003, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+    - {fileID: 4096714141431861496, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+    - {fileID: 7882666062745201332, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+    - {fileID: 110964770361821476, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+    - {fileID: 8241857682812234814, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+    - {fileID: 4418730927923945983, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+    - {fileID: 7575373511345454174, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
+    - {fileID: 962807336753433775, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f5a70607201f7e64b8de3e42b9f7c74c, type: 3}
 --- !u!60 &7202982174049676420 stripped
 PolygonCollider2D:
